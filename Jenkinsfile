@@ -7,7 +7,7 @@ pipeline {
 
         stage('Análisis de Requisitos') {
             steps {
-                echo '🔍 Verificando archivos clave del proyecto...'
+                echo ' Verificando archivos clave del proyecto...'
                 bat '''
                     if not exist README.md exit 1
                     if not exist src\\co\\edu\\unbosque\\controller\\conteoLetras.java exit 1
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Desarrollo del Software') {
             steps {
-                echo '📂 Preparando entorno de desarrollo...'
+                echo 'Preparando entorno de desarrollo...'
                 bat '''
                     if exist target rmdir /S /Q target
                     mkdir target\\classes
@@ -51,4 +51,5 @@ pipeline {
             }
         }
     }
+}
 }
